@@ -1,0 +1,24 @@
+#!/bin/bash -e
+#
+# S2I run script for the 's2i-confd' image.
+# The run script executes the server that runs your application.
+#
+# For more information see the documentation:
+#	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
+#
+
+# Run once, with sync only, to establish a baseline.  We only want to
+# trigger automation based on value changes.
+echo =======================================================
+echo ==== Establishing a baseline ==========================
+echo =======================================================
+${HOME}/confd -confdir "${HOME}" -config-file "${HOME}/confd.toml" \
+       -onetime -sync-only || true
+
+# Run for real...
+echo =======================================================
+echo ==== Watching for changes =============================
+echo =======================================================
+exec ${HOME}/confd -confdir "${HOME}" -config-file "${HOME}/confd.toml"
+
+
