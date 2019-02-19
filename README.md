@@ -1,5 +1,5 @@
-s2i-confd
-=========
+# s2i-confd
+> for building webhook-like triggers based on changes in key/value stores.
 
 This is an OpenShift
 [s2i](https://github.com/openshift/source-to-image) builder image for
@@ -21,6 +21,7 @@ Tower](https://www.ansible.com/products/tower) /
 
 What we end up with is a very simple system to trigger the execution
 of Ansible job templates based on changes in a key/value store.
+Think of it as a webhook service for key/value stores.
 
 Possible use cases include:
 
@@ -31,7 +32,11 @@ Possible use cases include:
 
 - etc etc
 
-Author
-======
+`s2i-confd` works with OpenShift's s2i tooling to produce fully-baked
+`confd` container images based on `confd` configury store in a git
+repo.  See https://github.com/atgreen/sample-confd-config as an
+example.
+
+## Author
 
 s2i-confd is an experiment by Anthony Green <green@redhat.com>.
