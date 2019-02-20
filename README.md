@@ -44,8 +44,12 @@ https://github.com/atgreen/sample-confd-config as an example.
 
 ## Sample usage
 
+The s2i-confd container image can be found in docker hub at
+https://cloud.docker.com/repository/docker/atgreen/s2i-confd .
+
 Most users will want to use OpenShift BuildConfigs with git webhooks
-to trigger the s2i build.  However, you can also run s2i by hand like so:
+to trigger the s2i build.  However, you can also run s2i by hand like
+so:
 
     s2i build https://github.com/atgreen/sample-confd-config.git atgreen/s2i-confd dyndns-trigger
     
