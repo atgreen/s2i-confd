@@ -39,8 +39,10 @@ Tower is just used here as an example.  It's your shell script, so
 `curl` to anything you like.  Use it, for instance, to post slack
 messages on changes in Hashicorp Vault.
 
-s2i-confd works with OpenShift's s2i tooling to produce fully-baked
-confd container images based on configury store in a git repo.  See
+s2i-confd works with OpenShift's source-to-image (s2i) tooling to
+produce fully-baked confd container images based on configury stored
+in a git repo.  The confd config files are the "source", and a
+purpose-built confd service container is the "image".  See
 https://github.com/atgreen/sample-confd-config as an example.
 
 ## Sample usage
