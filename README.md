@@ -6,11 +6,14 @@ This is an OpenShift
 [confd](http://www.confd.io/) services.  But what does that even
 mean?  confd is not a language runtime, right??
 
-confd is a tool to automate changes in local config files based on
-changing values in a key/value store, including etcd, consul, vault
-and more.  The config files are generated from templates provided in
-the confd config directory.  And, optionally, a service reload script
-will execute whenever the config file changes.
+confd watches key/value stores for changes, and updates local config
+files based on a templating scheme.  Supported key/value stores
+include [etcd](https://coreos.com/etcd/),
+[consul](https://www.consul.io/),
+[vault](https://www.vaultproject.io/) and more.  When a change is
+detected and a new config file is generated, confd will optionally run
+a service reload script to force the adoption of the new config by the
+appropriate service.
 
 What if the "config" files we generate are actually shell scripts?
 And what if, instead of triggering reloads of those config files, we
