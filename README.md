@@ -51,7 +51,7 @@ Most users will want to use OpenShift BuildConfigs with git webhooks
 to trigger the s2i build.  However, you can also run s2i by hand like
 so:
 
-    s2i build https://github.com/atgreen/sample-confd-config.git atgreen/s2i-confd dyndns-trigger
+    $ s2i build https://github.com/atgreen/sample-confd-config.git atgreen/s2i-confd dyndns-trigger
     
 This uses the `atgreen/s2i-confd` builder image against the confd
 configury stored at https://github.com/atgreen/sample-confd-config.git
