@@ -19,6 +19,6 @@ ${HOME}/confd -confdir "${HOME}" -config-file "${HOME}/confd.toml" \
 echo =======================================================
 echo ==== Watching for changes =============================
 echo =======================================================
-exec ${HOME}/confd -confdir "${HOME}" -config-file "${HOME}/confd.toml"
+exec ${HOME}/confd -confdir "${HOME}" -config-file "${HOME}/confd.toml" -watch
 
 
