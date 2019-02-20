@@ -15,13 +15,13 @@ will execute whenever the config file changes.
 What if the "config" files we generate are actually shell scripts?
 And what if, instead of triggering reloads of those config files, we
 executed these shell scripts?  And what if those scripts were simple
-`curl` commands used to trigger automation in [Ansible
+`curl` commands used to trigger automation in something like [Ansible
 Tower](https://www.ansible.com/products/tower) /
 [AWX](https://github.com/ansible/awx)?
 
 What we'd end up with is a very simple system to trigger the execution
 of Ansible job templates based on changes in a key/value store.  Think
-of it as a webhook service for key/value stores.
+of it like a webhook service for key/value stores.
 
 Possible use cases include:
 
@@ -31,6 +31,9 @@ Possible use cases include:
   changes in vault
 
 - etc etc
+
+Tower is just used here as an example.  It's your shell script, so
+`curl` to anything you like.
 
 s2i-confd works with OpenShift's s2i tooling to produce fully-baked
 confd container images based on configury store in a git repo.  See
