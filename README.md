@@ -42,6 +42,17 @@ s2i-confd works with OpenShift's s2i tooling to produce fully-baked
 confd container images based on configury store in a git repo.  See
 https://github.com/atgreen/sample-confd-config as an example.
 
+## Sample usage
+
+Most users will want to use OpenShift BuildConfigs with git webhooks
+to trigger the s2i build.  However, you can also run s2i by hand like so:
+
+    s2i build https://github.com/atgreen/sample-confd-config.git atgreen/s2i-confd dyndns-trigger
+    
+This uses the `atgreen/s2i-confd` builder image against the confd
+configury stored at https://github.com/atgreen/sample-confd-config.git
+resulting in docker image called `dyndns-trigger`.
+
 ## Author
 
 s2i-confd is an experiment by Anthony Green <green@redhat.com>.
