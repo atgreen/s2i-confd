@@ -6,7 +6,7 @@ This is an OpenShift
 [confd](http://www.confd.io/) services.  But what does that even
 mean?  confd is not a language runtime, right??
 
-confd watches key/value stores for changes, and updates local config
+confd watches key/value stores for changes and updates local config
 files based on a templating scheme.  Supported key/value stores
 include [etcd](https://coreos.com/etcd/),
 [consul](https://www.consul.io/),
